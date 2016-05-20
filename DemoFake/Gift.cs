@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 
 namespace DemoFake
 {
-    public class Gift
+    public class Gift : IGift
     {
+     
+
         public bool IsWeekend ()
         {
             return DateTime.Now.DayOfWeek == DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
+        }
+
+        public int BirthYear(int age)
+        {
+            
+            return DateTime.Now.Year - age;
         }
 
     }
