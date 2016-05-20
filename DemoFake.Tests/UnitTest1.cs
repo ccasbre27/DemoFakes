@@ -38,11 +38,17 @@ namespace DemoFake.Tests
         [TestMethod]
         public void TestWinner()
         {
+            // Arrange:
             StubIGift stubGift = new StubIGift();
+            // Shim DateTime.Now para que regrese una fecha fija
             stubGift.BirthYearInt32 = (parameter) => { return 1990; };
-
             Gift gift = new Gift();
-            Assert.AreEqual(1990, gift.BirthYear(26));
+
+            // Act:
+            int year = gift.BirthYear(26);
+
+            // Assert: 
+            Assert.AreEqual(1990, year);
         }
     }
 }
