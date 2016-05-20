@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace DemoFake
 {
-    class Program
+    public class Gift
     {
-        static void Main(string[] args)
+        public bool IsWeekend ()
         {
-
-
-
+            return DateTime.Now.DayOfWeek == DayOfWeek.Saturday || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
         }
+
     }
 }
