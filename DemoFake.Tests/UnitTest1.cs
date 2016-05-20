@@ -36,7 +36,7 @@ namespace DemoFake.Tests
         }
 
         [TestMethod]
-        public void TestWinner()
+        public void TestBirthYear()
         {
             // Arrange:
             StubIGift stubGift = new StubIGift();
